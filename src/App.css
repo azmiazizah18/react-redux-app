@@ -1,0 +1,31 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    font-family: Roboto, Lato, Nunito;
+    text-rendering: optimizelegibility;
+    @apply antialiased;
+  }
+  * {
+    @apply transition-shadow duration-200 focus-visible:outline-none 
+           focus-visible:ring-2 focus-visible:ring-royalblue 
+           focus-visible:ring-offset-2;
+  }
+  h1 {
+    @apply text-3xl font-bold;
+  }
+  h2 {
+    @apply text-2xl font-bold;
+  }
+  h3 {
+    @apply text-xl font-bold;
+  }
+  h4 {
+    @apply text-lg font-bold;
+  }
+  p, span {
+    @apply text-base;
+  }
+}

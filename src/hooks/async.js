@@ -10,10 +10,12 @@ export function Async(selector, initiator) {
     (async () => {
       if (!isInitialized) {
         try {
-          await initiator?.();
+          // Simulasi initiator yang selalu gagal
+          await initiator(); // Penambahan await tanpa optional chaining ?
           setIsInitialized(true);
         } catch (error) {
           toast.error(error.message);
+          setIsInitialized(true); // Pastikan isInitialized tetap true jika ada error
         }
       }
     })();

@@ -28,6 +28,7 @@ export function Comment({
     owner,
   } = comment;
 
+  // @ts-ignore
   const users = useSelector((state) => state.users);
   const commenter = React.useMemo(
     () => users.find((user) => user.id === owner.id),
@@ -71,6 +72,7 @@ export function Comment({
       <div className="flex grow items-center gap-1">
         <Button
           disabled={!authUserId}
+          // @ts-ignore
           withIcon
           onClick={handleUpvoteLogic}
           pill={false}
@@ -86,6 +88,7 @@ export function Comment({
 
         <Button
           disabled={!authUserId}
+          // @ts-ignore
           withIcon
           onClick={handleDownvoteLogic}
           pill={false}
@@ -100,6 +103,7 @@ export function Comment({
         </Button>
 
         <Button
+          // @ts-ignore
           withIcon
           pill={false}
           className="text-gray-400"

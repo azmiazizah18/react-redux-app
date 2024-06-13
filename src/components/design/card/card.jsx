@@ -1,5 +1,6 @@
 import { classname } from '@/utils';
 import PropTypes from 'prop-types';
+import React from 'react';
 
 export function Card({ children, className }) {
   return (

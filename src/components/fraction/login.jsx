@@ -35,6 +35,8 @@ export function LoginForm({ onSubmit }) {
             value={email}
             onChange={setEmail}
             placeholder="leejeno@gmail.com"
+            // @ts-ignore
+            required
           />
 
           <Input
@@ -42,6 +44,8 @@ export function LoginForm({ onSubmit }) {
             value={password}
             onChange={setPassword}
             placeholder="LeeJeno123"
+            // @ts-ignore
+            required
           />
         </div>
 

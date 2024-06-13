@@ -4,7 +4,9 @@ import React from 'react';
 
 export function NewThreadButton() {
   return (
-    <Button withIcon to="/threads/new">
+    <Button 
+// @ts-ignore
+    withIcon to="/threads/new">
       <VscGitPullRequestNewChanges />
       Thread Baru
     </Button>

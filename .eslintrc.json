@@ -2,23 +2,24 @@
   "env": {
     "browser": true,
     "es2021": true,
+    "node": true,
+    "jest": true,
     "cypress/globals": true,
-    "node": true
   },
   "extends": [
-    "prettier",
     "eslint:recommended",
     "plugin:react/recommended",
     "plugin:react/jsx-runtime",
     "plugin:react-hooks/recommended",
-    "airbnb"
+    "airbnb",
+    "prettier"
   ],
   "plugins": [
-    "prettier",
     "react-refresh",
     "react",
     "react-hooks",
-    "cypress"
+    "cypress",
+    "prettier"
   ],
   "ignorePatterns": [
     "dist",
@@ -43,6 +44,15 @@
   },
   "settings": {
     "import/resolver": {
+      "node": {
+        "extensions": [".js", ".jsx"]
+      },
+      "alias": {
+        "map": [
+          ["react-toastify", "./node_modules/react-toastify/dist/react-toastify.esm.development.js"]
+        ],
+        "extensions": [".js", ".jsx"]
+      },
       "jsconfig": {
         "config": "jsconfig.json"
       }
@@ -71,11 +81,6 @@
     "react/react-in-jsx-scope": "off",
     "react/jsx-one-expression-per-line": "off",
     "react/jsx-no-target-blank": "off",
-    "react-refresh/only-export-components": [
-      "warn",
-      {
-        "allowConstantExport": true
-      }
-    ]
+    "react-hooks/exhaustive-deps": "warn"
   }
 }

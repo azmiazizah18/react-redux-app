@@ -52,6 +52,7 @@ export function NewThread({ onSubmit, className }) {
       <Button
         className="w-full"
         pill
+        // @ts-ignore
         withIcon
         disabled={!title || !body || isSubmitting}
         onClick={handleSubmit}
